@@ -1,0 +1,42 @@
+/* src/components/ParallaxSection.css */
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+  }
+  
+  .layer-1 {
+    background: #1a1a2e; /* background color or image */
+    z-index: 1;
+  }
+  
+  .layer-2 {
+    background: #16213e; /* another layer color/image */
+    z-index: 2;
+    transform: translateZ(-1px) scale(2); /* creates depth */
+  }
+  
+  .layer-3 {
+    background: #0f3460; /* another layer color/image */
+    z-index: 3;
+    transform: translateZ(-2px) scale(3); /* creates depth */
+  }
+  
+  .parallax-layer h1 {
+    color: white;
+    text-align: center;
+    margin-top: 40vh;
+  }
+  
