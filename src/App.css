@@ -1,8 +1,6 @@
 body{
     overflow-x: hidden;
-}
-.all{
-  font-family: Verdana;
+    @apply font-sans;
 }
 
 /* App.css or index.css */

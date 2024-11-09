@@ -71,7 +71,7 @@ function Page1() {
         </div>
 
         {/* Heading Text */}
-        <div className="text text-white font-bold text-[2.5vh] md:text-[10vh] text-center z-25 pt-72 md:pt-48 whitespace-nowrap font-[gill sans]">
+        <div className="text text-white font-bold text-[2.5vh] md:text-[10vh] text-center z-25 pt-72 md:pt-48 whitespace-nowrap ">
           Walchand Linux Users&#39; Group
         </div>
 
