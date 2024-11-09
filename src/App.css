@@ -1,6 +1,9 @@
 body{
     overflow-x: hidden;
 }
+.h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* App.css or index.css */
 @keyframes animStar {

@@ -80,7 +80,7 @@ const Footer = () => {
                     Terms and Conditions    
                     </a> <br/>
                     <a href="https://github.com/Walchand-Linux-Users-Group/gitbook/blob/wiki/policies/cancellation-refund-policy.md" target="_blank">
-                    Cancellation/Refund Policy  
+                    {/* Cancellation/Refund Policy   */}
                     </a>                     
                 </div>
                 
