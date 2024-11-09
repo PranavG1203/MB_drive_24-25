@@ -18,7 +18,7 @@ const Footer = () => {
                 
                 <div className="space-y-2">
                     <a href="https://www.wcewlug.org/" target="_blank">
-                        <img src="/wlug_white.png" className="lg:max-w-[13rem] w-full max-w-[12rem]"></img>
+                        <img src="https://res.cloudinary.com/dq5mzbtzt/image/upload/v1731135294/wlug_wqclwc.png" className="lg:max-w-[13rem] w-full max-w-[12rem]"></img>
                     </a>
                     
                 </div>
