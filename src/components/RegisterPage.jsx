@@ -197,9 +197,9 @@ function RegisterForm() {
               <option value="">Select Branch</option>
               <option value="CSE">CSE</option>
               <option value="IT">IT</option>
-              <option value="AI">AI</option>
+              <option value="AI">AI/ML</option>
               <option value="Eln">Electronics</option>
-              <option value="Robotics">Robotics</option>
+              <option value="Robotics">Robotics and automation</option>
               <option value="Electrical">Electrical</option>
               <option value="Mechanical">Mechanical</option>
               <option value="Civil">Civil</option>
