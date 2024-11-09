@@ -159,7 +159,7 @@ function RegisterForm() {
   };
 
   return (
-    <div className="w-full p-4 sm:p-8 rounded-xl mb-10 sm:mb-0">
+    <div className="w-full p-4 sm:p-8 rounded-xl sm:mb-0">
       <form
         onSubmit={handleSubmit}
         className="space-y-6 max-w-md mx-auto bg-gray-900 p-6 rounded-lg shadow-lg"
