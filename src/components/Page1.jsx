@@ -67,7 +67,7 @@ function Page1() {
           <img className="trees absolute top-0 bottom-3 left-0 w-full h-full object-cover z-40" src="front_trees.svg" alt="Front Trees" />
           
           {/* Static Inverted Front Trees */}
-          <img className="trees-inverted absolute top-20 left-0 w-full h-full object-cover z-40 transform -scale-x-100" src="front_trees.svg" alt="Inverted Front Trees" />
+          <img className="trees-inverted absolute top-15 left-0 w-full h-full object-cover z-40 transform -scale-x-100" src="front_trees.svg" alt="Inverted Front Trees" />
         </div>
 
         {/* Heading Text */}

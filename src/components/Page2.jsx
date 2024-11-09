@@ -6,9 +6,9 @@ import { OrbitControls } from "@react-three/drei";
 
 function Page2() {
   return (
-    <div className="page h-full md:h-[110vh] bg-[#000628] z-50 flex items-center md:justify-center flex-col gap-[9vh]">
+    <div className="page h-full md:h-[140vh] bg-[#000628] z-50 flex items-center md:justify-center flex-col gap-[9vh]">
       <div className="text flex items-center justify-center flex-col md:gap-6">
-        <div className="heading text-white font-bold text-2xl md:text-[8vh]">
+        <div className="heading  text-white font-bold text-2xl md:text-[8vh]">
           Member Board Drive 1
         </div>
         <div className="heading text-white font-bold text-xl md:text-[4vh]"></div>
