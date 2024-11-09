@@ -1,3 +1,27 @@
 body{
     overflow-x: hidden;
 }
+
+/* App.css or index.css */
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2560px) translateX(-2560px);
+  }
+}
+
+@keyframes animShootingStar {
+  from {
+    transform: translateY(0px) translateX(0px) rotate(-45deg);
+    opacity: 1;
+    height: 5px;
+  }
+  to {
+    transform: translateY(-2560px) translateX(-2560px) rotate(-45deg);
+    opacity: 1;
+    height: 800px;
+  }
+}
