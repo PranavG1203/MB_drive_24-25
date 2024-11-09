@@ -164,7 +164,7 @@ function RegisterForm() {
         onSubmit={handleSubmit}
         className="space-y-6 max-w-md mx-auto bg-gray-900 p-6 rounded-lg shadow-lg"
       >
-        <h2 className="text-3xl font-bold text-center text-white">Register</h2>
+        <h2 className="text-3xl font-bold text-center text-white font-[verdana]">Register</h2>
 
         <div className="space-y-4">
           <div>
