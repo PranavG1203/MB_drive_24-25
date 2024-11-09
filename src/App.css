@@ -3,25 +3,19 @@ body{
 }
 
 /* App.css or index.css */
-
 @keyframes animStar {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2560px) translateX(-2560px);
-  }
+  0% { opacity: 0.5; transform: translateY(0px); }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; transform: translateY(-2px); }
 }
 
 @keyframes animShootingStar {
-  from {
-    transform: translateY(0px) translateX(0px) rotate(-45deg);
-    opacity: 1;
-    height: 5px;
-  }
-  to {
-    transform: translateY(-2560px) translateX(-2560px) rotate(-45deg);
-    opacity: 1;
-    height: 800px;
-  }
+  0% { opacity: 1; transform: translate(-100px, -100px); }
+  100% { opacity: 0; transform: translate(0px, 0px); }
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #FFF;
 }

@@ -1,26 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Utility functions for creating stars
 const createStars = (numStars, width, height) => {
-  let stars = [];
-  for (let i = 0; i < numStars; i++) {
-    stars.push({
-      x: Math.floor(Math.random() * width),
-      y: Math.floor(Math.random() * height),
-    });
-  }
-  return stars;
+  return Array.from({ length: numStars }, () => ({
+    x: Math.floor(Math.random() * width),
+    y: Math.floor(Math.random() * height),
+  }));
 };
 
 // StarField Component
 const StarField = () => {
   const starFieldWidth = 2560;
   const starFieldHeight = 2560;
-  const starStartOffset = 600;
-  const numStarOneStars = 1700;
-  const numStarTwoStars = 700;
-  const numStarThreeStars = 200;
-  const numShootingStars = 10;
+  const numStarOneStars = 1000; // Reduced count
+  const numStarTwoStars = 400;
+  const numStarThreeStars = 100;
+  const numShootingStars = 5;
 
   const starsOne = createStars(numStarOneStars, starFieldWidth, starFieldHeight);
   const starsTwo = createStars(numStarTwoStars, starFieldWidth, starFieldHeight);
@@ -32,6 +27,7 @@ const StarField = () => {
     borderRadius: '50%',
     backgroundColor: '#FFF',
     animation: 'animStar linear infinite',
+    willChange: 'transform, opacity',
   };
 
   const shootingStarStyle = {
@@ -40,11 +36,13 @@ const StarField = () => {
     borderTopRightRadius: '50%',
     background: 'linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,1))',
     animation: 'animShootingStar linear infinite',
+    willChange: 'transform, opacity',
   };
 
   return (
     <div className="container h-screen w-full relative bg-gradient-to-b from-[#020107] to-[#201b46]">
       <div className="text-white absolute top-1/2 right-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-bold">
+        {/* Main Content */}
       </div>
 
       {/* Star Layers */}
@@ -115,8 +113,5 @@ const StarField = () => {
     </div>
   );
 };
-
-// Add keyframes to global CSS
-
 
 export default StarField;
