@@ -30,7 +30,7 @@ function Page2() {
         </div>
 
         {/* Right Box with Register Page */}
-        <div className="tux flex-1 flex justify-center items-center w-full md:w-[50%] bg-opacity-[20%] bg-zinc-400 rounded-xl  mb-5 sm:mb-0">
+        <div className="tux flex-1 flex justify-center items-center w-full md:w-[50%] bg-opacity-[20%] bg-zinc-400 rounded-xl sm:mb-0">
           <RegisterPage />
         </div>
       </div>
