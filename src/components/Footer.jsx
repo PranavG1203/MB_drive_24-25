@@ -1,4 +1,4 @@
-import * as React from 'react';
+// import * as React from 'react';
 import {
     FaGithub,
     FaInstagram,
@@ -12,9 +12,9 @@ import {
 const Footer = () => {
     return(
         <>
-          <div id="about" className="footer w-full justify-center bottom-0 bg-blue-600 z-50  flex items-center">
+          <div id="about" className="footer w-full justify-center bottom-0  bg-[#000628] z-50  flex items-center">
             {/* <img src={FooterImg} className=" bg-blend-multiply"></img> */}
-            <div className="flex w-full flex-col space-y-5 md:space-y-0 md:flex-row bg-[#010A26] border-[8px] border-purple-200 rounded-lg lg:justify-evenly justify-center p-6 items-center lg:px-12">
+            <div className="flex w-full flex-col space-y-5 md:space-y-0 md:flex-row bg-[#010A26] border-[8px] border-opacity-20 border-zinc-400 rounded-lg lg:justify-evenly justify-center p-6 items-center lg:px-12">
                 
                 <div className="space-y-2">
                     <a href="https://www.wcewlug.org/" target="_blank">
@@ -80,7 +80,7 @@ const Footer = () => {
                     Terms and Conditions    
                     </a> <br/>
                     <a href="https://github.com/Walchand-Linux-Users-Group/gitbook/blob/wiki/policies/cancellation-refund-policy.md" target="_blank">
-                    {/* Cancellation/Refund Policy   */}
+{/*                     Cancellation/Refund Policy   */}
                     </a>                     
                 </div>
                 

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import StarField from './Star';
+import  { useEffect } from 'react';
+// import StarField from './Star';
 
 function Page1() {
   useEffect(() => {
@@ -60,7 +60,7 @@ function Page1() {
         <div className="absolute top-0 left-0 w-full h-full">
           {/* <StarField/> */}
           <img className="stars absolute top-0 left-0 w-full h-full object-cover z-5" src="stars.png" alt="Stars" />
-          <img className="moon absolute top-0 right-0 w-full h-full object-cover object-top z-10 mix-blend-screen" src="moon.png" alt="Moon"/>
+          <img className="moon absolute top-[-30px] right-0 w-full h-full object-cover object-top z-10 mix-blend-screen" src="moon.png" alt="Moon"/>
           <img className="mountains absolute top-0 left-0 w-full h-full object-cover md:left-48 z-35" src="mountains.svg" alt="Mountains" />
           
           {/* Moving Front Trees */}
@@ -72,7 +72,7 @@ function Page1() {
 
         {/* Heading Text */}
         <div className="text text-white font-bold text-[2.5vh] md:text-[10vh] text-center z-25 pt-72 md:pt-48 whitespace-nowrap">
-          Walchand Linux Users' Group
+          Walchand Linux Users&#39; Group
         </div>
 
       </div>
