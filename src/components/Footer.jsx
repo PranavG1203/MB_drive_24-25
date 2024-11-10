@@ -65,7 +65,17 @@ const Footer = () => {
               Home
             </a>
             <br />
-            <a href="#Page2" target="self">
+            {/* Updated Register link with onClick for smooth scrolling */}
+            <a
+              href="#Page2"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default behavior
+                const page2Element = document.getElementById("Page2");
+                if (page2Element) {
+                  page2Element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
               Register
             </a>
             <br />
@@ -73,6 +83,7 @@ const Footer = () => {
               About Us
             </a>
           </div>
+
           <div className="space-y-0 text-white text-center lg:text-left">
             <a
               href="https://github.com/Walchand-Linux-Users-Group/gitbook/blob/wiki/policies/privacy-policy.md"
