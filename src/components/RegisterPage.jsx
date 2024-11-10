@@ -63,15 +63,13 @@ function RegisterForm() {
         if (!value) error = "Photo is required";
         else if (!value.type.startsWith("image/"))
           error = "Please upload an image file";
-        else if (value.size > 5000000)
-          error = "Photo must be less than 5MB";
+        else if (value.size > 1000000) error = "Photo must be less than 1MB";
         break;
       case "resume":
         if (!value) error = "Resume is required";
         else if (!value.type.includes("pdf"))
           error = "Please upload a PDF file";
-        else if (value.size > 10000000)
-          error = "Resume must be less than 10MB";
+        else if (value.size > 5000000) error = "Resume must be less than 5MB";
         break;
       default:
         break;
@@ -127,7 +125,9 @@ function RegisterForm() {
     } catch (error) {
       console.error("Registration error:", error);
       const errorMessage =
-        error.response?.data?.error || error.message || "Registration failed. Please try again.";
+        error.response?.data?.error ||
+        error.message ||
+        "Registration failed. Please try again.";
       alert(errorMessage);
     } finally {
       setIsLoading(false);
@@ -153,8 +153,12 @@ function RegisterForm() {
               />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-white">Registration Successful!</h2>
-          <p className="text-gray-300">Thank you for registering. We'll get back to you soon.</p>
+          <h2 className="text-2xl font-bold text-white">
+            Registration Successful!
+          </h2>
+          <p className="text-gray-300">
+            Thank you for registering. We'll get back to you soon.
+          </p>
         </div>
       </div>
     );
@@ -195,7 +199,6 @@ function RegisterForm() {
               )}
             </div>
           ))}
-
           <div>
             <select
               name="branch"
@@ -220,19 +223,36 @@ function RegisterForm() {
               <p className="text-red-500 text-sm mt-1">{errors.branch}</p>
             )}
           </div>
-
           <div className="flex gap-4 items-center">
-            <div className="text w-16 sm:w-24 text-white font-bold text-xl">Photo</div>
-            {formData.photo ? (
-              <div className="px-4 py-2 bg-green-600 text-white rounded-lg">Added</div>
-            ) : (
-              <label
-                htmlFor="photo-upload"
-                className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
-              >
-                Choose File
-              </label>
-            )}
+            <div className="text w-16 sm:w-24 text-white font-bold text-xl">
+              Photo
+            </div>
+            <div className="flex gap-2">
+              {formData.photo && !errors.photo && (
+                <>
+                  <div className="px-4 py-2 bg-green-600 text-white rounded-lg">
+                    Added
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      document.getElementById("photo-upload").click()
+                    }
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                  >
+                    Change
+                  </button>
+                </>
+              )}
+              {(!formData.photo || errors.photo) && (
+                <label
+                  htmlFor="photo-upload"
+                  className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Choose File
+                </label>
+              )}
+            </div>
             <input
               type="file"
               name="photo"
@@ -242,21 +262,40 @@ function RegisterForm() {
               className="hidden"
               required
             />
-            {errors.photo && <p className="text-red-500 text-sm">{errors.photo}</p>}
-          </div>
-
-          <div className="flex gap-4 pt-2 pb-2 items-center">
-            <div className="text w-16 sm:w-24 text-white font-bold text-xl">Resume</div>
-            {formData.resume ? (
-              <div className="px-4 py-2 bg-green-600 text-white rounded-lg">Added</div>
-            ) : (
-              <label
-                htmlFor="resume-upload"
-                className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
-              >
-                Choose File
-              </label>
+            {errors.photo && (
+              <p className="text-red-500 text-sm">{errors.photo}</p>
             )}
+          </div>
+          <div className="flex gap-4 pt-2 pb-2 items-center">
+            <div className="text w-16 sm:w-24 text-white font-bold text-xl">
+              Resume
+            </div>
+            <div className="flex gap-2">
+              {formData.resume && !errors.resume && (
+                <>
+                  <div className="px-4 py-2 bg-green-600 text-white rounded-lg">
+                    Added
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      document.getElementById("resume-upload").click()
+                    }
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                  >
+                    Change
+                  </button>
+                </>
+              )}
+              {(!formData.resume || errors.resume) && (
+                <label
+                  htmlFor="resume-upload"
+                  className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Choose File
+                </label>
+              )}
+            </div>
             <input
               type="file"
               name="resume"
@@ -266,7 +305,9 @@ function RegisterForm() {
               className="hidden"
               required
             />
-            {errors.resume && <p className="text-red-500 text-sm">{errors.resume}</p>}
+            {errors.resume && (
+              <p className="text-red-500 text-sm">{errors.resume}</p>
+            )}
           </div>
         </div>
 
