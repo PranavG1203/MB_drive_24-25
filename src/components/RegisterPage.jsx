@@ -81,7 +81,7 @@ function RegisterForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const trimmedValue = value.trim();
+    const trimmedValue = value;
     setFormData((prev) => ({ ...prev, [name]: trimmedValue }));
     const error = validateField(name, trimmedValue);
     setErrors((prev) => ({ ...prev, [name]: error }));
