@@ -227,18 +227,32 @@ function RegisterForm() {
             <div className="text w-16 sm:w-24 text-white font-bold text-xl">
               Photo
             </div>
-            {formData.photo && !errors.photo ? (
-              <div className="px-4 py-2 bg-green-600 text-white rounded-lg">
-                Added
-              </div>
-            ) : (
-              <label
-                htmlFor="photo-upload"
-                className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
-              >
-                Choose File
-              </label>
-            )}
+            <div className="flex gap-2">
+              {formData.photo && !errors.photo && (
+                <>
+                  <div className="px-4 py-2 bg-green-600 text-white rounded-lg">
+                    Added
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      document.getElementById("photo-upload").click()
+                    }
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                  >
+                    Change
+                  </button>
+                </>
+              )}
+              {(!formData.photo || errors.photo) && (
+                <label
+                  htmlFor="photo-upload"
+                  className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Choose File
+                </label>
+              )}
+            </div>
             <input
               type="file"
               name="photo"
@@ -256,18 +270,32 @@ function RegisterForm() {
             <div className="text w-16 sm:w-24 text-white font-bold text-xl">
               Resume
             </div>
-            {formData.resume && !errors.resume ? (
-              <div className="px-4 py-2 bg-green-600 text-white rounded-lg">
-                Added
-              </div>
-            ) : (
-              <label
-                htmlFor="resume-upload"
-                className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
-              >
-                Choose File
-              </label>
-            )}
+            <div className="flex gap-2">
+              {formData.resume && !errors.resume && (
+                <>
+                  <div className="px-4 py-2 bg-green-600 text-white rounded-lg">
+                    Added
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      document.getElementById("resume-upload").click()
+                    }
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                  >
+                    Change
+                  </button>
+                </>
+              )}
+              {(!formData.resume || errors.resume) && (
+                <label
+                  htmlFor="resume-upload"
+                  className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Choose File
+                </label>
+              )}
+            </div>
             <input
               type="file"
               name="resume"
@@ -280,7 +308,7 @@ function RegisterForm() {
             {errors.resume && (
               <p className="text-red-500 text-sm">{errors.resume}</p>
             )}
-          </div>{" "}
+          </div>
         </div>
 
         <button
