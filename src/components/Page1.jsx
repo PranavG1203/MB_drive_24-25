@@ -60,7 +60,7 @@ function Page1() {
         <div className="absolute top-0 left-0 w-full h-full">
           {/* <StarField/> */}
           <img className="stars absolute top-0 left-0 w-full h-full object-cover z-5" src="stars.png" alt="Stars" />
-          <img className="moon absolute top-[-30px] right-0 w-full h-full object-cover object-top z-10 mix-blend-screen" src="moon.png" alt="Moon"/>
+          <img className="moon absolute top-[-50px] right-0 w-full h-full object-cover object-top z-10 mix-blend-screen" src="moon.png" alt="Moon"/>
           <img className="mountains absolute top-0 left-0 w-full h-full object-cover md:left-48 z-35" src="mountains.svg" alt="Mountains" />
           
           {/* Moving Front Trees */}
