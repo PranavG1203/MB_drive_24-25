@@ -23,17 +23,19 @@ function Page2() {
 
       <div className="box flex flex-col md:flex-row gap-4 w-full md:w-[80vw] h-[120vh] rounded-xl ">
         {/* Left Box with Canvas and Model */}
+        <div className="tux flex-1 flex justify-center items-center w-full md:w-[50%] bg-opacity-[20%] bg-zinc-400 rounded-xl mb-5 sm:mb-0">
+          {/* <RegisterPage /> */}
+          <div className="border-div"></div>
+        </div>
+        
+
+        {/* Right Box with Register Page */}
         <div className="tux flex-1 flex justify-center items-center w-full md:w-[50%] bg-opacity-[20%] bg-zinc-400 rounded-xl ">
           <Canvas className="w-[70vw] h-[250vh] md:w-full md:h-full">
             <ambientLight />
             <ModelTux />
             <OrbitControls enableZoom={false} enablePan={true} />
           </Canvas>
-        </div>
-
-        {/* Right Box with Register Page */}
-        <div className="tux flex-1 flex justify-center items-center w-full md:w-[50%] bg-opacity-[20%] bg-zinc-400 rounded-xl mb-5 sm:mb-0">
-          <RegisterPage />
         </div>
       </div>
     </div>

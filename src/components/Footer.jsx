@@ -14,10 +14,10 @@ const Footer = () => {
     <>
       <div
         id="about"
-        className="footer w-full justify-center bottom-0  bg-[#000628] z-50  flex items-center"
+        className="footer w-full justify-center bottom-0  bg-[#000628]  z-50  flex items-center"
       >
         {/* <img src={FooterImg} className=" bg-blend-multiply"></img> */}
-        <div className="flex w-full flex-col space-y-5 md:space-y-0 md:flex-row bg-[#010A26] border-[8px] border-opacity-20 border-zinc-400 rounded-lg lg:justify-evenly justify-center p-6 items-center lg:px-12">
+        <div className="flex w-full flex-col space-y-5 md:space-y-0 md:flex-row bg-[#010A26] border-[8px] border-opacity-20 mt-2 border-zinc-400 rounded-lg lg:justify-evenly justify-center p-6 items-center lg:px-12">
           <div className="space-y-2">
             <a href="https://www.wcewlug.org/" target="_blank">
               <img
